@@ -1,0 +1,53 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OneSchool &mdash; Website by Colorlib</title>
+        <meta charset="utf-8">
+      
+        
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet"> 
+        <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+      </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" >
+      
+    
+  <div class="col-lg-5 ml-auto"  >
+      <form action="login" method="post" class="form-box">
+        {% csrf_token %}
+      
+      <div class="form-group">
+        <input type="text" class="btn btn-warning btn-pill" name="username" placeholder="username"><br><br>
+        <input type="text" class="btn btn-warning btn-pill" name="password" placeholder="password"><br><br>
+        <input type="submit" class="btn btn-secondary btn-pill"  placeholder="LOGIN"><br>
+       
+      </div>
+      </form>
+    
+<div class="alarm">
+{%for message in messages%}
+<h3>{{message}}</h3>
+{%endfor%}
+
+</div>
+
+    
+</body>
+</html>
